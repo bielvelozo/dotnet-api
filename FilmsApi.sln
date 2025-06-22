@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32929.385
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FilmesApi", "FilmesApi\FilmesApi.csproj", "{5E4BEC81-BF0A-4047-B1E8-B047A420D3AE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FilmsApi", "FilmsApi\FilmsApi.csproj", "{5E4BEC81-BF0A-4047-B1E8-B047A420D3AE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,29 +1,29 @@
-﻿using FilmesApi.Models;
+﻿using FilmsApi.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace FilmesApi.Controllers;
+namespace FilmsApi.Controllers;
 
 [ApiController]
 [Route("[controller]")]
 public class FilmeController : ControllerBase
 {
 
-    private static List<Filme> filmes = new List<Filme>();
+    private static List<Film> filmes = new List<Film>();
     private static int id = 0;
 
     [HttpPost]
     public IActionResult AdicionaFilme(
-        [FromBody] Filme filme)
+        [FromBody] Film film)
     {
-        filme.Id = id++;
-        filmes.Add(filme);
+        film.Id = id++;
+        filmes.Add(film);
         return CreatedAtAction(nameof(RecuperaFilmePorId),
-            new { id = filme.Id },
-            filme);
+            new { id = film.Id },
+            film);
     }
 
     [HttpGet]
-    public IEnumerable<Filme> RecuperaFilmes([FromQuery] int skip = 0, 
+    public IEnumerable<Film> RecuperaFilmes([FromQuery] int skip = 0, 
         [FromQuery] int take = 50)
     {
         return filmes.Skip(skip).Take(take);
